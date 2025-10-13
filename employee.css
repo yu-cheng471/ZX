@@ -1,0 +1,274 @@
+/* ========== Global Styles ========== */
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: #f0f2f5;
+  color: #333;
+  margin: 0;
+  line-height: 1.6;
+  padding: 1.5rem;
+}
+
+/* ========== Page Title ========== */
+h1 {
+  text-align: center;
+  font-size: 2.2rem;
+  color: #222;
+  margin-top: 1.5rem;
+  margin-bottom: 1.8rem;
+  letter-spacing: 0.5px;
+}
+
+/* ========== Back Button ========== */
+.actions {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+
+.btn {
+  text-decoration: none;
+  padding: 0.7rem 1.4rem;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 500;
+  transition: all 0.25s ease;
+}
+
+.btn.secondary {
+  background: #b63120;
+  color: #fff;
+}
+.btn.secondary:hover {
+  background: #b63120;
+  transform: translateY(-2px);
+}
+
+/* ========== Form Container ========== */
+form {
+  max-width: 800px;
+  margin: 0 auto;
+  background: #fff;
+  border-radius: 14px;
+  padding: 2rem;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+form:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.12);
+}
+
+/* ========== Form Rows ========== */
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.row label {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  font-weight: 500;
+  font-size: 0.95rem;
+  color: #222;
+}
+
+/* ========== Input & Select Styles ========== */
+input[type="text"],
+input[type="number"],
+select {
+  padding: 0.6rem 0.8rem;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+  margin-top: 0.3rem;
+  transition: all 0.2s ease;
+}
+
+input[type="text"]:focus,
+input[type="number"]:focus,
+select:focus {
+  border-color: #ff0000;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.2);
+  outline: none;
+}
+
+input[readonly] {
+  background: #f7f7f7;
+  color: #555;
+}
+
+input::placeholder {
+  color: #999;
+}
+
+/* Remove arrows from number inputs */
+input[type="number"]::-webkit-inner-spin-button, 
+input[type="number"]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+  margin: 0; 
+}
+
+input[type="number"] { 
+  -moz-appearance: textfield; 
+}
+
+/* ========== Section Headers ========== */
+h3 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #333;
+  margin: 1.5rem 0 0.8rem 0;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid #f0f0f0;
+}
+
+/* ========== Form Sections ========== */
+#dailyFields,
+#monthlyFields {
+  margin-top: 1rem;
+}
+
+/* ========== Button Styles ========== */
+.actions {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  margin-top: 1.5rem;
+}
+
+.actions.center { 
+  justify-content: center; 
+}
+
+.btn {
+  padding: 0.6rem 1.2rem;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.btn.primary { 
+  background: #fb8122; 
+  color: #fff; 
+}
+
+.btn.primary:hover { 
+  background: #fb8122; 
+}
+
+.btn.primary2 { 
+  background: #007bff; 
+  color: #fff; 
+}
+
+.btn.primary2:hover { 
+  background: #007bff; 
+}
+
+.btn.ghost {
+  background: transparent;
+  border: 1px solid #ccc;
+  color: #333;
+}
+
+.btn.ghost:hover { 
+  background: #f0f0f0; 
+}
+
+/* ========== Responsive Design ========== */
+@media (max-width: 768px) {
+  form {
+    padding: 1.5rem;
+  }
+  
+  .row {
+    flex-direction: column;
+  }
+  
+  .row label {
+    width: 100%;
+  }
+  
+  .actions {
+    flex-direction: column;
+  }
+  
+  .btn {
+    width: 100%;
+  }
+}
+
+
+/* Search Bar */
+#employeeSearch {
+  display: block;
+  width: 100%;
+  max-width: 400px;
+  margin: 2rem auto 1rem;
+  padding: 0.7rem 0.9rem;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+  transition: all 0.2s ease;
+}
+#employeeSearch:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.25);
+}
+
+/* Tables */
+table.mini {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+  font-size: 0.95rem;
+}
+table.mini th, table.mini td {
+  border: 1px solid #ddd;
+  padding: 0.6rem 0.8rem;
+  text-align: left;
+}
+table.mini th {
+  background: #f1f3f5;
+  font-weight: 600;
+}
+table.mini tr:hover {
+  background: #f9f9f9;
+}
+
+/* Checkbox */
+input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
+  margin-right: 0.5rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .row { flex-direction: column; }
+  .hero h1 { font-size: 1.5rem; }
+  .hero p { font-size: 0.9rem; }
+}
+
+/* Footer */
+.site-footer {
+  text-align: center;
+  padding: 1rem 0;
+  background: #f7f7f7;
+  margin-top: 2rem;
+  color: #555;
+}
