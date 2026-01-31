@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>ZHONGXING Full-Month Payslip</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <main class="container">
+    <!-- Hero Section -->
+    <section class="hero">
+      <h1>ZHONGXING Full-Month Payslip</h1>
+      <div class="actions">
+        <a href="halfmonth.html" class="btn primary">Half-Month Payslip</a>
+        <a href="employee.html" class="btn primary2">Manage Employee Data</a>
+      </div>
+    </section>
+
+    <!-- Payslip Form -->
+    <section class="card">
+      <form id="payslipForm" autocomplete="off">
+        <!-- Employee Info -->
+        <div class="row">
+          <label>ID
+            <input id="empId" type="text" placeholder="10001">
+          </label>
+          <label>Name
+            <input id="empName" type="text" readonly>
+          </label>
+          <label>Department
+            <input id="empDept" type="text" readonly>
+          </label>
+          <label>Wage Type
+            <input id="wageType" type="text" readonly>
+          </label>
+          <label>
+            <input type="checkbox" id="siRequired"> SSO
+          </label>
+        </div>
+
+        <!-- Primary Pay -->
+        <h3>Primary Pay</h3>
+        <div class="row">
+          <label>Daily
+            <input id="dailyWage" type="number" step="any">
+          </label>
+          <label>Monthly
+            <input id="monthlyWage" type="number" step="any" readonly>
+          </label>
+          <label>Days Worked
+            <input id="daysWorked" type="number" step="any">
+          </label>
+          <label>Total
+            <input id="basicTotal" type="text" readonly>
+          </label>
+        </div>
+
+        <!-- Additional Pay -->
+        <h3>Additional Pay</h3>
+        <div class="row">
+          <label>OT
+            <input id="overtimeHours" type="number" step="any">
+          </label>
+          <label>Net-OT
+            <input id="overtimePay" type="text" readonly>
+          </label>
+          <label>Sun
+            <input id="holidayDays" type="number" step="any">
+          </label>
+          <label>Net-Sun
+            <input id="holidayPay" type="text" readonly>
+          </label>
+        </div>
+
+        <div class="row">
+          <label>Location
+            <input id="locationPay" type="number" step="any">
+          </label>
+          <label>KPI
+            <input id="kpiBonus" type="number" step="any">
+          </label>
+          <label>Attendance
+            <input id="attendanceBonus" type="number" step="any">
+          </label>
+          <label>Other
+            <input id="otherBonus" type="number" step="any">
+          </label>
+        </div>
+
+        <div class="row">
+          <label>Total
+            <input id="totalEarnings" type="text" readonly>
+          </label>
+        </div>
+
+        <!-- Deductions -->
+        <h3>Deductions</h3>
+        <div class="row">
+          <label>Advance
+            <input id="advance" type="number" step="any">
+          </label>
+          <label>SSO
+            <input id="socialInsurance" type="text" readonly>
+          </label>
+          <label>Absent
+            <input id="absenteeism" type="number" step="any">
+          </label>
+          <label>Net-Absent
+            <input id="absenteeismDeduction" type="text" readonly>
+          </label>
+          <label>Passport
+  <input id="passportFees" type="number" step="any">
+</label>
+<label>Other
+  <input id="otherFees" type="number" step="any">
+</label>
+<label>Total
+  <input id="totalDeductions" type="text" readonly>
+</label>
+
+        </div>
+
+        <div class="row">
+          <label>Net-Total
+            <input id="netPay" type="text" readonly>
+          </label>
+        </div>
+
+        <!-- Buttons -->
+        <div class="actions">
+          <button type="button" id="addBatchBtn" class="btn primary3">Add</button>
+          <button type="button" id="resetBtn" class="btn ghost">Reset</button>
+        </div>
+      </form>
+    </section>
+
+    <!-- Batch Queue -->
+    <section class="card small">
+      <div class="actions">
+        <input type="text" id="batchSearch" placeholder="Search">
+        <button id="clearAllBtn" class="btn small ghost">Clear All</button>
+      </div>
+      <div id="batchList">No payslips added</div>
+      <div class="actions">
+        <button id="exportBatchBtn" class="btn primary3">Export All</button>
+<button id="exportIndividualBtn" class="btn secondary4">Export Individual</button>
+      </div>
+    </section>
+  </main>
+
+  <script src="index.js"></script>
+</body>
+</html>
