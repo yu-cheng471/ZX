@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>SHUN HANG Employee Data</title>
+  <link rel="stylesheet" href="employee.css">
+</head>
+<body>
+  <h1>SHUN HANG Employee Data</h1>
+
+   <div class="actions">
+    <a href="halfmonth.html" class="btn primary">Back to Half-Month Payslip</a>
+    <a href="index.html" class="btn secondary">Back to Full-Month Payslip</a>
+  </div>
+
+<form id="employeeForm" autocomplete="off">
+  <!-- Employee Info -->
+  <div class="row">
+    <label>ID
+      <input id="empId" type="text" placeholder="10001" required>
+    </label>
+    <label>Name
+      <input id="empName" type="text" required>
+    </label>
+  </div>
+
+  <div class="row">
+    <label>Department
+      <select id="empDept" required>
+        <option value=""></option>
+        <option value="Maint">Maintenance</option>
+        <option value="Transport">Transport</option>
+        <option value="Machine">Machine</option>
+        <option value="Office">Office</option>
+        <option value="Scrap-Boonsri">Scrap-Boonsri</option>
+        <option value="Scrap-Lin">Scrap-Lin</option>
+        <option value="Scrap-Precha">Scrap-Precha</option>
+        <option value="Support">Support</option>
+        <option value="Drawing">Drawing</option>
+        <option value="Maid">Maid</option>
+        <option value="Reed-Ake">Reed-Aey</option>
+        <option value="Room-Tel">Room-Tel</option>
+      </select>
+    </label>
+    <label>Wage Type
+      <select id="wageType">
+        <option value="daily">Daily</option>
+        <option value="monthly">Monthly</option>
+      </select>
+    </label>
+  </div>
+
+  <!-- Daily Fields -->
+  <div id="dailyFields">
+    <div class="row">
+      <label>Daily Wage (฿)
+        <input id="dailyWage" type="number" step="any" min="0">
+      </label>
+      <label>Location Pay (฿)
+        <input id="dailyLocationPay" type="number" step="any" min="0">
+      </label>
+    </div>
+  </div>
+
+  <!-- Monthly Fields -->
+  <div id="monthlyFields" style="display:none;">
+    <div class="row">
+      <label>Monthly Wage (฿)
+        <input id="monthlyWage" type="number" step="any" min="0">
+      </label>
+      <label>Location Pay (฿)
+        <input id="monthlyLocationPay" type="number" step="any" min="0">
+      </label>
+    </div>
+  </div>
+
+  <!-- Buttons -->
+  <div class="actions center">
+    <button type="button" id="saveEmployeeBtn" class="btn primary2">Save</button>
+    <button type="button" id="resetBtn" class="btn ghost">Reset</button>
+  </div>
+</form>
+
+  <input id="employeeSearch" placeholder="Search">
+  <div id="employeeList"></div>
+
+  <script src="employee.js"></script>
+</body>
+</html>
+ 
